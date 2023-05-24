@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="board">
+        <div id="first">
+            <label for="no">Enter the number of processes : </label>
+            <input type="text" placeholder="Number" id="no" required>
+            <label for="approach">Approach</label>
+            <select name="approach" id="approach">
+                <option value="Preemptive">Preemptive</option>
+                <option value="non-preemptive">nonpreemptive</option>
+            </select>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </div>
+    <script src="fcfs.js"></script>
+</body>
+</html>
