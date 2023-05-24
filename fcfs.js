@@ -94,9 +94,9 @@ function getTurnAroundTime(lt){
     return avgtat/lt.length;
 }
 function displayTheOutput(lt){
-    var avgwt = avgWaitingTime(lt);
     var avgct = avgCompilationTime(lt);
     var avgtat = getTurnAroundTime(lt);
+    var avgwt = avgWaitingTime(lt);
     document.getElementById("inp").style.display = "None";
     var table = document.createElement("div");
     table.id = "table";
