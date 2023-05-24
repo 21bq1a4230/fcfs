@@ -64,9 +64,9 @@ function f(){
 }
 function avgWaitingTime(lt){
     var twt=0;
-    var wtlt = [0];
+    var wtlt = [];
     for(var i=0;i<lt.length-1;i++){
-        twt += lt[i].bt;
+        twt = lt[i].tat - lt[i].bt;
         wtlt.push(twt);
     }
     for(var i = 0;i<lt.length;i++){
