@@ -62,19 +62,6 @@ function f(){
     }
     displayTheOutput(lt);
 }
-function avgWaitingTime(lt){
-    var twt=0;
-    var wtlt = [];
-    for(var i=0;i<lt.length-1;i++){
-        twt = lt[i].tat - lt[i].bt;
-        wtlt.push(twt);
-    }
-    for(var i = 0;i<lt.length;i++){
-        lt[i].wt = wtlt[i];
-    }
-    const sum = wtlt.reduce((partialSum, a) => partialSum + a, 0);
-    return sum/lt.length
-}
 function avgCompilationTime(lt){
     var tct = 0;
     for(var i=0;i<lt.length;i++){
@@ -92,6 +79,19 @@ function getTurnAroundTime(lt){
         avgtat += tat;
     }
     return avgtat/lt.length;
+}
+function avgWaitingTime(lt){
+    var twt=0;
+    var wtlt = [];
+    for(var i=0;i<lt.length-1;i++){
+        twt = lt[i].tat - lt[i].bt;
+        wtlt.push(twt);
+    }
+    for(var i = 0;i<lt.length;i++){
+        lt[i].wt = wtlt[i];
+    }
+    const sum = wtlt.reduce((partialSum, a) => partialSum + a, 0);
+    return sum/lt.length
 }
 function displayTheOutput(lt){
     var avgct = avgCompilationTime(lt);
